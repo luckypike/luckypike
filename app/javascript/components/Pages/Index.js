@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Header from '../Header'
+import Works from './Index/Works'
 
 import styles from './Index.module.css'
 
@@ -15,21 +16,19 @@ export default function Index ({ works }) {
       <Header />
 
       <div className={styles.root}>
-        <h1 className={styles.h0}>
-          Интеллигентные интернет-проекты
-        </h1>
+        <div className={styles.intro}>
+          <h1 className={styles.h0}>
+            Интеллигентные интернет-проекты
+          </h1>
 
-        <p>
-          Находим баланс между функциональностью проекта и его внешней эстетикой. Функциональный дизайн
-        </p>
-      </div>
+          <p>
+            Находим баланс между функциональностью проекта и его внешней эстетикой. Функциональный дизайн
+          </p>
+        </div>
 
-      <div>
-        {works.map(work =>
-          <div key={work.id}>
-            <img src={work.image_url} />
-          </div>
-        )}
+        <div className={styles.works}>
+          <Works works={works} />
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,24 @@
+.work {
+  &:not(:last-child) {
+    margin-bottom: calc(var(--yr) * var(--s3));
+  }
+}
+
+.image {
+  margin-bottom: calc(var(--yr) * var(--s1));
+
+  & img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.title,
+.desc,
+.url {
+  margin-top: calc(var(--yr) * var(--s2));
+}
+
+.text {
+  display: none;
+}

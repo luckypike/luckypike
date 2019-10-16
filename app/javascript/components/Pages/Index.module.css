@@ -2,6 +2,14 @@
   padding: 0 calc(1 / 21 * 100%);
 }
 
+.intro {
+  margin-bottom: calc(var(--yr) * 32);
+
+  @media (--s) {
+    margin-bottom: calc(var(--yr) * 92);
+  }
+}
+
 .h0 {
   composes: h0 from '../Fonts.module.css';
 }

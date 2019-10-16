@@ -6,10 +6,8 @@ development:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-  region: eu-west-2
-  bucket: luckypike-development
-  upload:
-    acl: public-read
+  region: eu-central-1
+  bucket: luckypike-develop
 
 production:
   service: S3
@@ -17,8 +15,6 @@ production:
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
   region: eu-central-1
   bucket: luckypike-production
-  upload:
-    acl: public-read
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
