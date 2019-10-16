@@ -1,0 +1,25 @@
+.root {
+  padding: 0 calc(1 / 21 * 100%);
+  margin: calc(var(--yr) * 8) 0 calc(var(--yr) * 32);
+
+  @media (--s) {
+    margin: calc(var(--yr) * 24) 0 calc(var(--yr) * 32);
+  }
+}
+
+.logo {
+  padding: calc(var(--yr) * 6) 0;
+
+  & svg {
+    display: block;
+    height: calc(var(--yr) * 4);
+  }
+
+  @media (--s) {
+    padding: calc(var(--yr) * 5) 0;
+
+    & svg {
+      height: calc(var(--yr) * 6);
+    }
+  }
+}

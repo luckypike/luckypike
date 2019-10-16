@@ -11,5 +11,7 @@ html
     = javascript_pack_tag 'app'
     = stylesheet_pack_tag 'app'
 
+    = stylesheet_link_tag 'https://use.typekit.net/sbg2sau.css' unless Rails.env.test?
+
   body
     = yield

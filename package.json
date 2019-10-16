@@ -14,7 +14,8 @@
     "rails-erb-loader": "^5.5.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react_ujs": "^2.6.0"
+    "react_ujs": "^2.6.0",
+    "svg-react-loader": "^0.4.6"
   },
   "version": "0.1.0",
   "devDependencies": {

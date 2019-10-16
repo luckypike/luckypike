@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @work.title
+p
+  strong Desc:
+  = @work.desc
+p
+  strong Text:
+  = @work.text
+p
+  strong Url:
+  = @work.url
+
+=> link_to 'Edit', edit_work_path(@work)
+'|
+=< link_to 'Back', works_path

@@ -15,9 +15,14 @@ gem 'webpacker'
 gem 'i18n-js'
 gem 'rails-i18n'
 
+gem 'devise'
+
 gem 'meta-tags'
 
 gem 'jbuilder', '~> 2.7'
+
+gem 'aws-sdk-s3', require: false
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

@@ -1,0 +1,7 @@
+.root {
+  padding: 0 calc(1 / 21 * 100%);
+}
+
+.h0 {
+  composes: h0 from '../Fonts.module.css';
+}
