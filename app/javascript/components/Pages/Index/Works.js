@@ -15,7 +15,10 @@ export default function Works ({ works }) {
       {works.map(work =>
         <div key={work.id} className={styles.work}>
           <div className={styles.image}>
-            <img src={work.image_url} />
+            <picture>
+              <source media="(min-width: 960px)" srcSet={work.image_urls.o} />
+              <img src={work.image_urls.m} />
+            </picture>
           </div>
 
           <div className={styles.dt}>

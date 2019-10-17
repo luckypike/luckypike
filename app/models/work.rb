@@ -1,26 +1,21 @@
 class Work < ApplicationRecord
-  has_one_attached :image
+  include Proxy
 
-  IMG_KEY = [Rails.application.credentials.dig(:imgproxy, :key)].pack('H*')
-  IMG_SALT = [Rails.application.credentials.dig(:imgproxy, :salt)].pack('H*')
+  has_one_attached :image
 
   def as_json(options = nil)
     super({
       only: [],
-      methods: %i[id title desc text url image_url]
+      methods: %i[id title desc text url image_urls]
     }.deep_merge(options || {}))
   end
 
-  def image_url
-    # url = image.service.send(:object_for, image.key).public_url
-    url = "s3://luckypike-develop/#{image.key}"
-    url = Base64.urlsafe_encode64(url).tr('=', '').scan(/.{1,16}/).join('/')
-    url = "/fill/1500/1000/sm/0/#{url}.jpg"
-
-    digest = OpenSSL::Digest.new('sha256')
-    hmac = Base64.urlsafe_encode64(OpenSSL::HMAC.digest(digest, IMG_KEY, IMG_SALT + url)).tr('=', '')
-
-    # Rails.application.credentials.dig(:imgproxy, :host) + hmac + url
-    Rails.application.credentials.dig(:imgproxy, :host) + hmac + url
+  def image_urls
+    {
+      o: proxy_image_url(:image, :fit, 1500, 1500),
+      m: proxy_image_url(:image, :fill, 1000, 1000),
+      h: proxy_image_url(:image, :fill, 1500, 1000),
+      v: proxy_image_url(:image, :fill, 1000, 1500)
+    } if image.attached?
   end
 end

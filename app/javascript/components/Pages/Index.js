@@ -4,14 +4,17 @@ import PropTypes from 'prop-types'
 import Header from '../Header'
 import Works from './Index/Works'
 import Services from './Index/Services'
+import Vacancies from './Index/Vacancies'
+import Footer from '../Footer'
 
 import styles from './Index.module.css'
 
 Index.propTypes = {
-  works: PropTypes.array.isRequired
+  works: PropTypes.array.isRequired,
+  vacancies: PropTypes.array.isRequired
 }
 
-export default function Index ({ works }) {
+export default function Index ({ works, vacancies }) {
   return (
     <div>
       <Header />
@@ -34,7 +37,13 @@ export default function Index ({ works }) {
         <div className={styles.services}>
           <Services />
         </div>
+
+        <div className={styles.vacancies}>
+          <Vacancies vacancies={vacancies} />
+        </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

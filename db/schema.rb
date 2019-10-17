@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_17_090655) do
+ActiveRecord::Schema.define(version: 2019_10_17_103415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,8 +44,20 @@ ActiveRecord::Schema.define(version: 2019_10_17_090655) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "surname"
+    t.string "position"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "vacancies", force: :cascade do |t|
+    t.string "title"
+    t.text "text"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_vacancies_on_user_id"
   end
 
   create_table "works", force: :cascade do |t|
@@ -59,4 +71,5 @@ ActiveRecord::Schema.define(version: 2019_10_17_090655) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "vacancies", "users"
 end

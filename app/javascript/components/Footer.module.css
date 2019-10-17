@@ -1,0 +1,24 @@
+.root {
+  border-top: 1px solid #eee;
+  margin: calc(var(--yr) * var(--s4)) calc(1 / 21 * 100%) calc(var(--yr) * var(--s4));
+  padding-top: calc(var(--yr) * var(--s4));
+  composes: at from './Fonts.module.css';
+
+  @media (--m) {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+
+    & .contacts {
+      grid-column: span 4;
+    }
+
+    & .address {
+      grid-column: span 8;
+      margin-top: 0;
+    }
+  }
+}
+
+.address {
+  margin-top: calc(var(--yr) * var(--s3))
+}

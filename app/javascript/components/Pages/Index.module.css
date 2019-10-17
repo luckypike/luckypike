@@ -3,11 +3,16 @@
 }
 
 .intro {
-  margin-bottom: calc(var(--yr) * 32);
-  max-width: 40rem;
+  padding-bottom: calc(var(--yr) * 32);
+  background: url(../../images/back.svg) center 38% no-repeat;
+  background-size: 100% auto;
+
+  & h1, & p {
+    max-width: 40rem;
+  }
 
   @media (--s) {
-    margin-bottom: calc(var(--yr) * 92);
+    padding-bottom: calc(var(--yr) * 92);
   }
 }
 
@@ -20,5 +25,9 @@
 }
 
 .services {
-  margin-bottom: calc(var(--yr) * var(--s4) * 2);
+  margin-bottom: calc(var(--yr) * var(--s4));
+}
+
+.vacancies {
+  margin-bottom: calc(var(--yr) * var(--s4));
 }

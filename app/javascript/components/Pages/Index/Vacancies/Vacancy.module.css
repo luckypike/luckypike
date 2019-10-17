@@ -1,0 +1,82 @@
+.root {
+  transition: border 0.4s, background 0.4s, color 0.4s;
+
+  &:first-child {
+    border-top: 1px solid #eee;
+  }
+
+  &.active {
+    color: white;
+    background-color: #252525;
+    border-bottom: 1px solid #eee;
+
+    & .header {
+      padding: calc(var(--yr) * var(--s3));
+      border-bottom: 1px solid color-mod(#eee a(0.1));
+    }
+  }
+}
+
+.header {
+  cursor: pointer;
+  padding: calc(var(--yr) * var(--s3)) 0;
+  border-bottom: 1px solid #eee;
+  transition: border 0.4s, padding 0.4s;
+  display: flex;
+
+  & h2 {
+    margin-bottom: 0;
+  }
+}
+
+.cross {
+  margin-left: auto;
+  width: 1rem;
+
+  & line {
+    transition: stroke 0.3s, opacity 0.3s;
+  }
+
+  &.active {
+    & line {
+      stroke: #fff;
+
+      &:first-child {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.user {
+  display: flex;
+}
+
+.name {
+  composes: h3 from '../../../Fonts.module.css';
+}
+
+.avatar {
+  width: calc(var(--lh) * 3 * var(--yr));
+  height: calc(var(--lh) * 3 * var(--yr));
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: var(--xr);
+
+  & img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.text {
+  margin-top: calc(var(--yr) * var(--s3));
+}
+
+.dt {
+  padding: calc(var(--yr) * var(--s3));
+}
+
+.position {
+  composes: at from '../../../Fonts.module.css';
+}

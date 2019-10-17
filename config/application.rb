@@ -35,5 +35,6 @@ module Luckypike
     config.generators.javascripts = nil
     config.generators.helper = nil
     config.generators.test_framework = nil
+    config.generators.jbuilder = nil
   end
 end
