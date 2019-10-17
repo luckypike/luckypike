@@ -1,0 +1,5 @@
+.root {
+  background-color: #eee;
+  padding: calc(var(--yr) * var(--s4)) calc(1 / 21 * 100%);
+  margin: 0 calc(1 / 21 * 100% * -1);
+}

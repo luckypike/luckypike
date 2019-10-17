@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import Header from '../Header'
 import Works from './Index/Works'
+import Services from './Index/Services'
 
 import styles from './Index.module.css'
 
@@ -28,6 +29,10 @@ export default function Index ({ works }) {
 
         <div className={styles.works}>
           <Works works={works} />
+        </div>
+
+        <div className={styles.services}>
+          <Services />
         </div>
       </div>
     </div>

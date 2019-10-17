@@ -16,20 +16,22 @@ export default function Works ({ works }) {
             <img src={work.image_url} />
           </div>
 
-          <div className={styles.titte}>
-            {work.title}
-          </div>
+          <div className={styles.dt}>
+            <div className={styles.titte}>
+              {work.title}
+            </div>
 
-          <div className={styles.desc}>
-            {work.desc}
-          </div>
+            <div className={styles.desc}>
+              {work.desc}
+            </div>
 
-          <div className={styles.text}>
-            {work.text}
-          </div>
+            <div className={styles.text}>
+              {work.text}
+            </div>
 
-          <div className={styles.url}>
-            {work.url}
+            <div className={styles.url}>
+              {work.url}
+            </div>
           </div>
         </div>
       )}

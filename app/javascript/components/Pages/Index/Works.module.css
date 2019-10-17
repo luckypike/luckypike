@@ -1,6 +1,47 @@
+.root {
+  @media (--m) {
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+  }
+}
+
 .work {
-  &:not(:last-child) {
-    margin-bottom: calc(var(--yr) * var(--s3));
+  margin-bottom: calc(var(--yr) * var(--s4) * 2);
+
+  @media (--m) {
+    &:nth-child(3n + 1) {
+      grid-column: 2 / span 5;
+    }
+
+    &:nth-child(3n + 2) {
+      grid-column: 8 / span 5;
+    }
+
+    &:nth-child(3n) {
+      grid-column: 14 / span 5;
+    }
+
+    &:nth-child(1) {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(19, 1fr);
+
+      & .image {
+        grid-column: span 11;
+      }
+
+      & .dt {
+        grid-column: 13 / span 7;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: 3 / span  7;
+    }
+
+    &:nth-child(3) {
+      grid-column: 13 / span  7;
+    }
   }
 }
 
