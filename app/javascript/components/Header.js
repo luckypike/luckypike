@@ -10,6 +10,10 @@ export default function Header () {
       <div className={styles.logo}>
         <Logo />
       </div>
+
+      <div className={styles.get}>
+        <a href="mailto: we@luckypike.com">Написать нам</a>
+      </div>
     </header>
   )
 }

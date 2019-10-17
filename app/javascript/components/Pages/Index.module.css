@@ -4,8 +4,8 @@
 
 .intro {
   padding-bottom: calc(var(--yr) * 32);
-  background: url(../../images/back.svg) center 38% no-repeat;
-  background-size: 100% auto;
+  background: url(../../images/back.svg) left 45% no-repeat;
+  background-size: auto 30%;
 
   & h1, & p {
     max-width: 40rem;
@@ -13,6 +13,12 @@
 
   @media (--s) {
     padding-bottom: calc(var(--yr) * 92);
+  }
+
+  @media (--l) {
+    background: url(../../images/back.svg) left 35% no-repeat;
+    background-size: 100% auto;
+
   }
 }
 

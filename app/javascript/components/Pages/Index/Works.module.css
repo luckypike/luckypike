@@ -126,6 +126,7 @@
   & svg {
     display: block;
     width: calc(var(--yr) * var(--lh));
+    height: calc(var(--yr) * var(--lh));
     margin-right: var(--xr);
   }
 }
