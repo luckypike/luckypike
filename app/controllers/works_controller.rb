@@ -3,7 +3,7 @@ class WorksController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @works = Work.all
+    @works = Work.order(weight: :asc).all
   end
 
   def show; end
@@ -44,6 +44,6 @@ class WorksController < ApplicationController
   end
 
   def work_params
-    params.require(:work).permit(:title, :desc, :text, :url, :image)
+    params.require(:work).permit(:title, :desc, :text, :url, :image, :weight)
   end
 end

@@ -17,7 +17,7 @@ export default function Works ({ works }) {
           </div>
 
           <div className={styles.dt}>
-            <div className={styles.titte}>
+            <div className={styles.title}>
               {work.title}
             </div>
 

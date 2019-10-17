@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @works = Work.all
+    @works = Work.order(weight: :asc).all
   end
 end

@@ -35,6 +35,11 @@ strong, b {
   font-weight: var(--fw_bold);
 }
 
+.xt {
+  font-size: calc(var(--yr) * calc(var(--fs) + 2));
+  line-height: calc(var(--yr) * calc(var(--lh) + 2));
+}
+
 .at {
   font-size: calc(var(--yr) * calc(var(--fs) - 0.5));
   line-height: calc(var(--yr) * calc(var(--lh) - 1));
