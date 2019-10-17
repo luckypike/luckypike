@@ -1,1 +1,6 @@
-= react_component 'Pages/Index', { works: @works, vacancies: @vacancies }
+- set_meta_tags title: 'создание интернет-проектов, приложений, сервисов и сайтов',
+  reverse: false,
+  description: 'Дизайн и создание интернет-проектов и сайтов. Проектирование и разработка сервисов и приложений.',
+  keywords: 'сайты, интернет-проекты, приложения, веб-сервисы, лакипайк, l..ike, luckypike'
+
+= react_component 'Pages/Index', { works: @works, vacancies: @vacancies }, { prerender: true }
