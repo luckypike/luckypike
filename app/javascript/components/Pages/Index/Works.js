@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import styles from './Works.module.css'
 
+import Url from '!svg-react-loader?!./Works/Images/Url.svg'
+
 Works.propTypes = {
   works: PropTypes.array.isRequired
 }
@@ -29,9 +31,10 @@ export default function Works ({ works }) {
               {work.text}
             </div>
 
-            <div className={styles.url}>
-              {work.url}
-            </div>
+            <a href={work.url} className={styles.url}>
+              <Url />
+              {work.url.replace('https://', '')}
+            </a>
           </div>
         </div>
       )}

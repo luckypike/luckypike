@@ -23,11 +23,10 @@ h2,
   font-weight: var(--fw_normal);
 }
 
-h3, .h3 {
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: inherit;
-  line-height: inherit;
+h3,
+.h3 {
+  font-size: calc(var(--yr) * calc(var(--fs) + 3));
+  line-height: calc(var(--yr) * calc(var(--lh) + 1));
   font-weight: var(--fw_normal);
 }
 

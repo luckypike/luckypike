@@ -90,7 +90,7 @@
   & img {
     display: block;
     /* max-width: 100%; */
-    max-height: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     bottom: 0;
@@ -106,7 +106,7 @@
 }
 
 .title {
-  composes: h2 from '../../Fonts.module.css';
+  composes: h3 from '../../Fonts.module.css';
 }
 
 .desc {
@@ -120,5 +120,12 @@
 }
 
 .url {
+  display: flex;
   margin-top: calc(var(--yr) * var(--s3));
+
+  & svg {
+    display: block;
+    width: calc(var(--yr) * var(--lh));
+    margin-right: var(--xr);
+  }
 }
