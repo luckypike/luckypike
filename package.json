@@ -17,6 +17,7 @@
     "react-animate-height": "^2.0.16",
     "react-dom": "^16.10.2",
     "react-markdown": "^4.2.2",
+    "react-yandex-metrika": "^2.5.1",
     "react_ujs": "^2.6.0",
     "svg-react-loader": "^0.4.6"
   },

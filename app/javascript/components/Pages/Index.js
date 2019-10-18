@@ -10,11 +10,12 @@ import Footer from '../Footer'
 import styles from './Index.module.css'
 
 Index.propTypes = {
+  env: PropTypes.string.isRequired,
   works: PropTypes.array.isRequired,
   vacancies: PropTypes.array.isRequired
 }
 
-export default function Index ({ works, vacancies }) {
+export default function Index ({ works, vacancies, env }) {
   return (
     <div>
       <Header />
@@ -43,7 +44,7 @@ export default function Index ({ works, vacancies }) {
         </div>
       </div>
 
-      <Footer />
+      <Footer env={env} />
     </div>
   )
 }

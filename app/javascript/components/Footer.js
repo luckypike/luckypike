@@ -1,8 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { YMInitializer } from 'react-yandex-metrika'
 
 import styles from './Footer.module.css'
 
-export default function Footer () {
+Footer.propTypes = {
+  env: PropTypes.string.isRequired
+}
+
+export default function Footer ({ env }) {
   return (
     <footer className={styles.root}>
       <div className={styles.contacts}>
@@ -18,6 +24,19 @@ export default function Footer () {
       </div>
 
       <div className={styles.calc} />
+
+      {env === 'production' &&
+        <YMInitializer
+          accounts={[30698398]}
+          version="2"
+          options={{
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+          }}
+        />
+      }
     </footer>
   )
 }
