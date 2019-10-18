@@ -122,6 +122,9 @@
 .url {
   display: flex;
   margin-top: calc(var(--yr) * var(--s3));
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: calc(var(--yr) * calc(var(--fs) - 2));  
 
   & svg {
     display: block;
