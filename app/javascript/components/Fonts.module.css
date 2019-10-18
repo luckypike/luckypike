@@ -5,7 +5,7 @@
 
   @media (--s) {
     font-size: calc(var(--yr) * calc(var(--fs) + 11));
-    line-height: calc(var(--yr) * calc(var(--lh) + 12));
+    line-height: calc(var(--yr) * calc(var(--lh) + 10));
   }
 }
 
