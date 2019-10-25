@@ -14,7 +14,7 @@ export default function Footer ({ env }) {
       <div className={styles.contacts}>
         +7 (831) 283-55-06
         <br />
-        we@luckypike.com
+        <a href="mailto:we@luckypike.com">we@luckypike.com</a>
       </div>
 
       <div className={styles.address}>
