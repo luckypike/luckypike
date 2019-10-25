@@ -28,7 +28,40 @@
 
 .get {
   margin-left: auto;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: calc(var(--yr) * calc(var(--fs) - 2));
+
+  & a {
+    position: relative;
+    display: inline-block;
+    font-weight: var(--fw_bold);
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #999;
+    }
+
+    &:hover {
+      &::after {
+        animation-name: url;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+
+  @media (--m) {
+    width: calc(7 / 19 * 100%)
+  }
+}
+
+@keyframes url {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

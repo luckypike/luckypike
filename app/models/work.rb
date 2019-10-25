@@ -6,7 +6,7 @@ class Work < ApplicationRecord
   def as_json(options = nil)
     super({
       only: [],
-      methods: %i[id title desc text url image_urls]
+      methods: %i[id title desc text url image_urls color]
     }.deep_merge(options || {}))
   end
 
