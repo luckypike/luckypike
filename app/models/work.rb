@@ -12,10 +12,10 @@ class Work < ApplicationRecord
 
   def image_urls
     {
-      o: proxy_image_url(:image, :fit, 1500, 1500),
-      m: proxy_image_url(:image, :fill, 1000, 1000),
-      h: proxy_image_url(:image, :fill, 1500, 1000),
-      v: proxy_image_url(:image, :fill, 1000, 1500)
+      o: proxy_image_url(image.key, :fit, 1500, 1500),
+      m: proxy_image_url(image.key, :fill, 1000, 1000),
+      h: proxy_image_url(image.key, :fill, 1500, 1000),
+      v: proxy_image_url(image.key, :fill, 1000, 1500)
     } if image.attached?
   end
 end

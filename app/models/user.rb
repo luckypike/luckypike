@@ -14,7 +14,7 @@ class User < ApplicationRecord
   end
 
   def avatar_url
-    proxy_image_url :avatar, :auto, 288, 288 if avatar.attached?
+    proxy_image_url avatar.key, :auto, 288, 288 if avatar.attached?
   end
 
   def as_json(options = nil)
