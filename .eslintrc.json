@@ -5,12 +5,8 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["@typescript-eslint"],
-  "extends": [
-    "standard-with-typescript",
-    "prettier",
-    "prettier/@typescript-eslint"
-  ],
-  "ignorePatterns": [".next/*", "node_modules/*"],
+  "extends": ["standard-with-typescript", "prettier", "prettier/@typescript-eslint"],
+  "ignorePatterns": [".next/*", "node_modules/*", "next-env.d.ts"],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": [
       "error",
