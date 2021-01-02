@@ -1,39 +1,35 @@
 {
   "name": "luckypike",
-  "private": true,
-  "dependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-react": "^7.10.4",
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.1.1",
-    "aos": "^3.0.0-beta.6",
-    "axios": "^0.19.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "classnames": "^2.2.6",
-    "normalize.css": "^8.0.0",
-    "prop-types": "^15.7.2",
-    "rails-erb-loader": "^5.5.2",
-    "react": "^16.13.1",
-    "react-animate-height": "^2.0.16",
-    "react-dom": "^16.13.1",
-    "react-markdown": "^4.2.2",
-    "react-yandex-metrika": "^2.5.1",
-    "react_ujs": "^2.6.0",
-    "svg-react-loader": "^0.4.6",
-    "webpack": "^4.0.0"
-  },
   "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier -w .",
+    "format:check": "prettier -c ."
+  },
+  "dependencies": {
+    "next": "10.0.4",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
+    "@types/node": "^14.14.19",
+    "@types/react": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-standard-with-typescript": "^19.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "webpack-dev-server": "^3.11.0"
+    "eslint-plugin-standard": "^5.0.0",
+    "normalize.css": "^8.0.1",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
   }
 }
